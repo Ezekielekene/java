@@ -45,7 +45,7 @@ console.log(myname.includes("THE"));
 //replace the first match of oldvalue with new value
 //we also have replace all
 console.log(myname.replace("BEST", "worst"));
-//returns the position of the first occurence of a specified value
+//returns the position of the first occurence of a s pecified value
 //returns -1 if not found
 console.log(myname.indexOf("BEST"));
 //extracts a part of the start index to the end index
