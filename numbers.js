@@ -10,17 +10,72 @@ console.log(userprofile.username)
 
 
 
+const student = {
+  name: "Naomi",
+  grade: { English: "B3", Biology: "A1", Physics: "E8" },
+  isactive: true
+}
+console.log(student)
+
+
+
+//const codestudent = {
+ /// name: "naomi",
+  
+//}
+
+
+//prototype
+const animal = {
+  type: "unknown",
+  sound: "none",
+  makeSound() {
+    console.log(this.sound)
+  }
+}
+
+const dog = Object.create(animal);
+dog.type = "dog"
+dog.sound = "woof"
+
+console.log(dog)//nested
+
+
+const defaultsettings = { theme: "light", fontsize: 16 };
+const userSettings = { fontsize: 18 };
+
+
+const finalSettings = Object.assign({}, defaultsettings, userSettings);
+console.log(finalSettings)
+
+
+
+const ent = [
+  ["name", "Tosin"],
+  ["age", 25],
+];
+console.log(Object.fromEntries(ent))
+
+
+
+const original = { A : 77, B : 66}
+const final = { ...original, c: 55 }
+console.log(final)
+
+
+
+
 let direprofile = {
-  username: "Fineboy",
-  password: "BigBOY",
+  username: "Chuwudire",
   status: "single",
   brainstatus: "Abnormal",
   lifestyle: "GAY",
-  age: "undefined",
+  age: 156,
   gender: "GAY",
   disability: "polio",
   maritalpatner: "RAM"
 };
+console.log(direprofile)
 
 
 
