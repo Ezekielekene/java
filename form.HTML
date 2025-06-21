@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormHandling</title>
+</head>
+<body>
+    <FORM action="" id="myform">
+        <input type="text" id="username" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </FORM>
+    <p id="output"></p>
+
+
+
+    <script>
+        //get the form element bybits id
+        const form = document.getElementById("myform")
+
+        //add the submit event listener to the form
+        form.addEventListener("submit", function (e) {
+
+            //prevent the default form submission  (page reload)
+            e.preventDefault()
+
+            //get the value entered in the input field
+            const name = document.getElementById("username").value;
+
+            //to display the entered value in the paragraph
+            document.getElementById("output").textContent = `Hello, ${name}!`
+
+        })
+    </script>
+</body>
+</html>

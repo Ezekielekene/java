@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>What is 2 + 2</h2>
+
+    <button onclick="checkAnswer(4)">4</button>
+    <button onclick="checkAnswer(5)">5</button>
+
+    <p id="result"></p>
+
+
+
+
+    <script>
+        //function to check the selected answer
+        function checkAnswer (answer) {
+            //get the result paragraph element
+
+            const result = document.getElementById("result")
+
+            //check if the answer correct (4)
+
+            if (answer == 4) {
+                //display correct message in green 
+                result.textContent = "correct"
+                result.style.colr = "green"              
+            }else{
+                //display wrong messing in red
+                result.textContent  = "Wrong, Try again"
+            }
+        }
+    </script>
+</body>
+</html>

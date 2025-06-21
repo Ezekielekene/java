@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="main-title">HELLO WORLD!</h1>
+    <P class="content">This is a paragraph</P>
+     
+<button id="click">Click Me!</button>
+<p id="output">You have'nt clicked me</p>
+<h1  id="heading">
+    Hello World
+</h1>
+<Button onclick="changeContent()">Change Content</Button>
+    <script>
+//selecting by id
+const title = document.getElementById("main-title")
+title.textContent = "Welcome to DOM manipulation"
+title.style.color = "blue"
+title.style.fontFamily = "cursive"
+title.style.fontSize = "60px"
+
+
+//selecting by class name
+const paragraph = document.getElementsByClassName("content")
+paragraph[0].textContent = "I love javascript"
+paragraph[0].style.fontFamily = "cursive"
+paragraph[0].style.fontSize = "40px"
+paragraph[0].style.color = "brown"
+
+
+
+//button
+const button = document.getElementById("click")
+const output = document.getElementById("output")
+
+
+button.addEventListener("dblclick", function() {
+    output.textContent = "Fuck off"
+    output.style.color = "green"
+});
+
+
+
+//query selector
+const palm = document.querySelector(".content")
+palm.textContent = "Dey Play"
+
+//function to modify the heading content and style
+function changeContent () {
+    //gets the heading element by ID 
+    const heading = document.getElementById("heading")
+
+    //change the text content of a heading
+    heading.textContent = "Welcome to kode10x"
+    
+    //change the color of the heading to blue
+    heading.style.color = "blue"
+}
+    </script>
+</body>
+</html>

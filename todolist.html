@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <input type="text" id="Task" placeholder="Add a new task">
+
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="List"></ul>
+
+    <button onclick="delTask()" id="deleteTask">Remove Task</button>
+
+
+    <script>
+        //function to add new tast
+        function addTask () {
+            //get th input field and list element
+            const taskInput = document.getElementById("Task");
+            const taskList = document.getElementById("List");
+
+            //check if the input is enmpty (trim whitespaces)
+            if (taskInput.value.trim() === "") return
+
+            //create a new list item  (li) element
+            const li = document.createElement("li")
+
+            //set the text content of the li to the input value
+             li.textContent = taskInput.value;
+
+            //Append the new task to the list
+            taskList.appendChild(li)
+            
+             
+
+            //  //delete
+            //  function delTask () {
+            //     const del  = document.getElementById("deleteTask");
+
+
+            //     del.onclick = function () {
+            //         del.removeChild(taskInput)
+            //     }
+            //  }
+
+             /////put a buttton that will remove each list 
+        }
+    </script>
+</body>
+</html>
+
+
+
+

@@ -24,7 +24,7 @@ let continent = "antartica"
 console.log(continent.charAt(6))
 
 
-let animal = "hipopotamus"
+let animalff = "hipopotamus"
 console.log(animal.charAt(8))
 
 let drink = "Bigcola"
@@ -44,3 +44,30 @@ console.log(date.split(""))
 
 const code = "7"
 console.log(code.padStart(4, 5))
+
+
+
+
+
+
+
+
+
+
+//Assign
+const a = { x: 1 };
+const b = { y: 2};
+const merged = Object.assign({}, a, b);
+console.log(merged);
+
+
+//fromEntries
+const entries = [["a", 1], ["b", 2]]
+const obj = Object.fromEntries(entries);
+console.log(obj)
+
+
+
+//Create
+const proto = ({ inherited: 1 });
+proto.inherited = 2
